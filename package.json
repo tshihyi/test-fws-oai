@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "codeceptjs run --steps"
+    "start": "codeceptjs run --steps",
+    "report": "codeceptjs run --reporter mochawesome"
   },
   "keywords": [],
   "author": "",
