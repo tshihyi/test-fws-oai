@@ -1,4 +1,9 @@
-# 操作步驟
+# 建置測試環境
+1. 安裝node windows版： https://nodejs.org/en/
+2. 安裝VS Code： https://code.visualstudio.com/
+3. 安裝測試工具：https://codecept.io/quickstart/
+
+# 測試工具與測試專案設定步驟
 - 先到github複製repository路徑，如：https://github.com/tshihyi/test-fws-oai
 - 開啟專案目錄，按右鍵選取「git bash here」，開啟指令視窗
 - 首次安裝指令
@@ -14,9 +19,18 @@ npm ci
 
 ```
  "scripts": {
-    "start": "codeceptjs run --steps"
+    "start": "codeceptjs run --steps",
+    "report": "codeceptjs run --reporter mochawesome"
   }
 
+```
+- npm執行指令，僅執行測試程式，不產出報表：
+```
+npm start
+```
+- npm執行指令，執行測試程式並產出報表：
+```
+npm run report
 ```
 
 - 之後執行套件指令
