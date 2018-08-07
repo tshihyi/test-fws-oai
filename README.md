@@ -27,12 +27,6 @@ npm ci
 
 - 測試工具相關設定請參考：codecept.json
 
-- 建立自己的barnch：
-
-```
- git checkout yourbranchname
-```
-
 # 簡易的git使用指令
 1. 取得最新版本：
 ```
@@ -65,3 +59,24 @@ Ctrl + ~
 Ctrl + Shit + V
 ```
 3. VS Code參考網址：https://code.visualstudio.com/docs/
+
+# Code Review流程
+1. 建立自己的barnch：
+
+```
+ git checkout -b yourbranchname
+```
+2. 撰寫各自的測試code
+3. Commit test code
+4. 新branch的第一次commit指令，push用法須帶參數。
+```
+git push -u origin HEAD
+```
+5. 建立pull request，於github上操作
+6. 後續指令，請參考 **簡易的git使用指令**，步驗2~4。
+7. 合併pull request, 於github上操作
+8. 回到VS Code，把barnch切回master後，並更新專案。
+```
+git pull
+```
+9. 更新完畢後，回到第一步，取一個新的barch名稱，重複上述1~8動作。
