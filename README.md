@@ -87,7 +87,7 @@ Ctrl + Shit + V
 git push -u origin HEAD
 ```
 5. 建立pull request，於github上操作
-6. 後續指令，請參考 **簡易的git使用指令**，步驗2~4。
+6. 後續指令，請參考 **簡易的git使用指令**，步驟2~4。
 7. 合併pull request, 於github上操作
 8. 回到VS Code，把barnch切回master後，並更新專案。
 ```
