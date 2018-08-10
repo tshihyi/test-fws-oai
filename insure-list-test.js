@@ -26,10 +26,10 @@ Scenario('login sucess', I => {
   I.wait(3)
   I.click('楊日光')
   I.wait(3)
-  // I.click('編輯')
-  // I.wait(3)
-  // I.click('職保資料')
-  // I.wait(3)
+  I.click('編輯')
+  I.wait(3)
+  I.click('職保資料')
+  I.wait(3)
 
 })
 
