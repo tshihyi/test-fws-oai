@@ -1,12 +1,13 @@
 {
-  "tests": "./*-test.js",
+  "tests": "./TC*-*.js",
   "timeout": 10000,
   "output": "./output",
   "helpers": {
     "Puppeteer": {
-      "url": "https://fws.coa.gov.tw/",
-      "windowSize": "1024x768",
-      "show": true
+      "url": "http://10.10.10.100",
+      "windowSize": "1280x720",
+      "show": true,
+      "restart": false
     }
   },
   "include": {
