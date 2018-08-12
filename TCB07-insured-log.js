@@ -1,13 +1,14 @@
-
 Feature('投保退保記錄')
 
 const login = require('./login.js')
 const farmers = require('./secret/profile-farmers.json')
-const webPage = '/InsureLog/Index'
+
+Before( I =>{
+  login(I)
+  I.amOnPage('/InsureLog/Index')
+})
 
 Scenario('所有保險', I => {
-  login(I)
-  I.amOnPage(webPage)
   I.click('btnSearch')
   I.wait(3)
   I.waitForText('保險類型')
@@ -16,8 +17,6 @@ Scenario('所有保險', I => {
 
 Data(farmers).Scenario('農保', (I, current) => {
   const { id, name } = current
-  login(I)
-  I.amOnPage(webPage)
   I.selectOption('SearchByInsureType', '0')
   I.fillField('SearchByIDCard', id)
   I.click('btnSearch')
@@ -29,8 +28,6 @@ Data(farmers).Scenario('農保', (I, current) => {
 
 Data(farmers).Scenario('職保', (I, current) => {
   const { id, name } = current
-  login(I)
-  I.amOnPage(webPage)
   I.selectOption('SearchByInsureType', '2')
   I.fillField('SearchByIDCard', id)
   I.click('btnSearch')
@@ -42,8 +39,6 @@ Data(farmers).Scenario('職保', (I, current) => {
 
 Data(farmers).Scenario('健保', (I, current) => {
   const { id, name } = current
-  login(I)
-  I.amOnPage(webPage)
   I.selectOption('SearchByInsureType', '1')
   I.fillField('SearchByIDCard', farmers[1].id)
   I.click('btnSearch')
