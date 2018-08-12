@@ -15,6 +15,7 @@
   },
   "license": "ISC",
   "dependencies": {
+    "mocha-multi": "^1.0.1",
     "mochawesome": "^3.0.3",
     "nightmare": "^3.0.1"
   },
