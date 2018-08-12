@@ -10,40 +10,31 @@ Before( I =>{
 
 Scenario('所有保險', I => {
   I.click('btnSearch')
-  I.wait(3)
+  I.waitForNavigation()
   I.waitForText('保險類型')
   I.see('保險類型')
 })
 
-Data(farmers).Scenario('農保', (I, current) => {
-  const { id, name } = current
-  I.selectOption('SearchByInsureType', '0')
-  I.fillField('SearchByIDCard', id)
+Scenario('農保', I => {
+  I.selectOption('SearchByInsureType', '農保')
+  I.fillField('SearchByIDCard', farmers[0].id)
   I.click('btnSearch')
-  I.wait(13)
-  id != farmers[1].id ?
-    I.see(name) :
-    I.dontSee(name)
+  I.waitForNavigation()
+  I.see(farmers[0].name)
 })
 
-Data(farmers).Scenario('職保', (I, current) => {
-  const { id, name } = current
-  I.selectOption('SearchByInsureType', '2')
-  I.fillField('SearchByIDCard', id)
+Scenario('職保', I => {
+  I.selectOption('SearchByInsureType', '職保')
+  I.fillField('SearchByIDCard', farmers[2].id)
   I.click('btnSearch')
-  I.wait(13)
-  id == farmers[2].id ?
-    I.see(name) :
-    I.dontSee(name)
+  I.waitForNavigation()
+  I.waitForText(farmers[2].name)
 })
 
-Data(farmers).Scenario('健保', (I, current) => {
-  const { id, name } = current
-  I.selectOption('SearchByInsureType', '1')
+Scenario('健保', I => {
+  I.selectOption('SearchByInsureType', '健保')
   I.fillField('SearchByIDCard', farmers[1].id)
   I.click('btnSearch')
-  I.wait(15)
-  id == farmers[1].id ?
-    I.see(name) :
-    I.dontSee(name)
+  I.waitForNavigation()
+  I.see(farmers[1].name)
 })
