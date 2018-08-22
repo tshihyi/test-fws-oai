@@ -4,7 +4,7 @@
   "output": "./output",
   "helpers": {
     "Puppeteer": {
-      "url": "http://118.163.241.213:8081/",
+      "url": "http://118.163.241.213:8081",
       "windowSize": "1280x720",
       "show": true,
       "restart": false
