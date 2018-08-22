@@ -1,7 +1,7 @@
 const safeRequire = require('./saferequired.js')
 
-const login = I => {
-    const {username, password} = safeRequire('./secret/profile0.json')
+const login = (I, role = 'supervisor') => {
+    const {username, password} = safeRequire('./secret/profile0.json')[role]
     I.amOnPage('/')
     I.fillField('Account', username)
     I.fillField('Password', password)
