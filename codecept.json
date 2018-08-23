@@ -1,5 +1,5 @@
 {
-  "tests": "./*-test.js",
+  "tests": "./TCB03-*-*t.js",
   "timeout": 10000,
   "output": "./output",
   "helpers": {
