@@ -4,7 +4,7 @@
   "output": "./output",
   "helpers": {
     "Puppeteer": {
-      "url": "https://fws.coa.gov.tw/",
+      "url": "http://118.163.241.213:8081/",
       "windowSize": "1024x768",
       "show": true
     }
