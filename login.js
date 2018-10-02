@@ -5,7 +5,7 @@ const login = I => {
     I.amOnPage('/')
     I.fillField('Account', username)
     I.fillField('Password', password)
-    I.click({css:'.btn-login.btn'})
+    I.click({css:'.btn_login.btn-login'})
     I.wait(2)
 }
 
