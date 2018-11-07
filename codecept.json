@@ -1,11 +1,11 @@
 {
-  "tests": "./TC*-*.js",
+  "tests": "./TCB03-*.js",
   "timeout": 10000,
   "output": "./output",
   "helpers": {
     "Puppeteer": {
       "url": "http://118.163.241.213:8081/",
-      "windowSize": "1280x720",
+      "windowSize": "1366x768",
       "show": true,
       "restart": false
     }

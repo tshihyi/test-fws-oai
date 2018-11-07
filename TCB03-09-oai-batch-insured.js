@@ -9,4 +9,7 @@ Before(I => {
 
 Scenario('批次投保匯入瀏覽', I => {
     I.see('新增匯入')
+    I.click('button.btn.default')
+    I.amOnPage('/Insure/OccupationalInjuryInsureBatchImport')
+    I.fillField('IDCard', 'H101636726')
 })
