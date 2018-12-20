@@ -1,12 +1,11 @@
 const farmers = require('./secret/profile-farmers-data.json') 
 
-const delNewIns = (I,i) => {
-    I.amOnPage('/Insure/List')
+const search = (I,i) => {
     I.fillField({name:'SearchIDCard'},farmers[i].ID)
     I.click('送出查詢')
     I.waitForNavigation()
-    I.click({css: 'input[type=checkbox]'})
-    I.click('刪除')
+    I.click('編輯')
+    I.waitForNavigation()
 }
 
-module.exports = delNewIns
+module.exports = search

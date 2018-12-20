@@ -1,16 +1,16 @@
 const farmers = require('./secret/profile-farmers-data.json') 
 
-const heaIns = (I,i) => {
-    I.click('新增健保資料')
-    I.wait(3)
+const rurInf = (I,i) => {
+    I.click('農保資料')
+    I.waitForNavigation()
     I.checkOption({name:'InsureStatus'})
-    I.wait(5)
-    I.click({id:'SameAsInsureUser'})
+    I.wait(3)
+    I.fillField({name:'ROC_AddDate'},farmers[i].ROC_AddDate)
     I.selectOption({name:'InsureHouseStatusID'},farmers[i].InsureHouseStatusID)
     I.amAcceptingPopups()
     I.click('確認儲存')
+    I.waitForNavigation()
     I.acceptPopup()
-    I.wait(3)
 }
 
-module.exports = heaIns
+module.exports = rurInf
