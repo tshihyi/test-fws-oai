@@ -10,7 +10,7 @@ const heaInf = (I,i) => {
     I.fillField({name:'ROC_AddDate'},farmers[i].ROC_AddDate)
     I.selectOption({name:'InsurerTitle'},farmers[i].InsurerTitle)
     I.checkOption({id:'SameAsInsureUser'})
-    I.selectOption({name:'InsureHouseStatusID'},farmers[i].InsureHouseStatusID)
+    I.selectOption({name:'InsureHouseStatusID'},farmers[i].InsureHouseStatusIDH)
 }
 
 module.exports = heaInf

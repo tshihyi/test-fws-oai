@@ -10,7 +10,7 @@ Before(I => {
 })
 
 Scenario('基本資料', I => {
-    i = 1
+    i = 2
     basicInf(I,i)
     I.amAcceptingPopups()
     I.click('儲存，僅參加健保')

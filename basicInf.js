@@ -13,7 +13,7 @@ const basicInf = (I,i) => {
     I.selectOption({name:'HouseKingRelation'},farmers[i].HouseKingRelation)
     I.fillField({name:'HouseKingIDCard'},farmers[i].HouseKingIDCard)
     I.fillField({name:'TransAccount'},farmers[i].TransAccount)
-    I.checkOption({id:'TransNameAsInsureName'})
+    I.fillField({name:'TransName'},farmers[i].TransName)
     I.fillField({name:'addTel'},farmers[i].addTel)
     I.click({id:'addTelBtn'})
     I.selectOption({name:'CountyCode'},farmers[i].CountyCode)

@@ -11,7 +11,7 @@ Before(I => {
 })
 
 Scenario('農保資料', I => {
-    i = 1
+    i = 2
     search(I,i)
     rurInf(I,i)
 })
